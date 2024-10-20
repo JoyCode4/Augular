@@ -23,4 +23,10 @@ export class AppComponent {
     console.log(val)
     console.log(this.name)
   }
+
+  students:Student[]=[{id:1,name: "Student1"},{id:2,name: "Student2"},{id:3,name: "Student3"},{id:4,name: "Student4"}];
+}
+interface Student{
+  id:number,
+  name:string,
 }
