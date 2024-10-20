@@ -12,4 +12,9 @@ export class AppComponent {
   // show(){
   //   alert("hello....!");
   // }
+  isValid:boolean=true;
+
+  changeValue(isValid:boolean){
+    this.isValid=isValid;
+  }
 }

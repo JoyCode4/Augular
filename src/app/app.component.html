@@ -1,5 +1,50 @@
-<div style="display: flex; justify-content: center;">
-  <app-parent></app-parent>
+<!-- <div style="display: flex; justify-content: center;"> -->
+<div style="">
+  <!-- <app-parent></app-parent> -->
+  <!-- only with if block -->
+  <!--
+    <input id="r1" type="radio" name="r1" id="" (click)="changeValue(true)">
+    <label for="r1">True</label>
+    <br>
+    <input id="r2" type="radio" name="r1" id="" (click)="changeValue(false)">
+    <label for="r1">False</label>
+    
+    <h3 *ngIf="isValid">It is True</h3>
+    <h3 *ngIf="!isValid">It is False</h3>
+    -->
+
+  <!-- using if and else block -->
+  <!--
+    <input id="r1" type="radio" name="r1" id="" (click)="changeValue(true)">
+    <label for="r1">True</label>
+    <br>
+    <input id="r2" type="radio" name="r1" id="" (click)="changeValue(false)">
+    <label for="r1">False</label>
+    
+    <h3 *ngIf="isValid; else elseBlock">It is True</h3>
+    <ng-template #elseBlock>
+      <h3>It is False</h3>
+    </ng-template>
+    -->
+
+  <!-- using if then and else -->
+  <!--
+    <input id="r1" type="radio" name="r1" id="" (click)="changeValue(true)">
+    <label for="r1">True</label>
+  <br>
+  <input id="r2" type="radio" name="r1" id="" (click)="changeValue(false)">
+  <label for="r1">False</label>
+
+  <div *ngIf="isValid; then thenBlock; else elseBlock">
+  </div>
+  <ng-template #thenBlock>
+    <h3>It is True</h3>
+  </ng-template>
+  
+  <ng-template #elseBlock>
+    <h3>It is False</h3>
+  </ng-template>
+  -->
 </div>
 
 <router-outlet></router-outlet>
