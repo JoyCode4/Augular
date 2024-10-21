@@ -2,28 +2,35 @@
   <h1>Welcome to {{title}}</h1>
 
   <h2>Pipes Operator ( | )</h2>
-  <h1>Employees Details</h1>
-  <table border="1">
-    <thead>
-      <tr>
-        <th>Sr. No</th>
-        <th>Emp Code</th>
-        <th>Emp Name</th>
-        <th>Emp Salary</th>
-        <th>Emp DOB</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let e of employees; let i=index">
-        <!-- here, we used normal pipe operator for code and name of employees  -->
-        <td>{{i+1}}</td>
-        <td>{{e.code | uppercase}}</td>
-        <td>{{e.name | uppercase}}</td>
-        <td>{{e.salary}}</td>
-        <td>{{e.DOB}}</td>
-      </tr>
-    </tbody>
-  </table>
+  <h3>Parameterize Pipes</h3>
+  <!--  It is using the Date creation method -->
+  <p>Date of Birth : <strong>{{dob}}</strong></p>
+  <p>Date in Paramneterized Pipes : <strong>{{dob |date: "medium"}}</strong></p>
+  <p>Date in Paramneterized Pipes Specific Format : <strong>{{dob |date: "dd/MM/yyyy"}}</strong></p>
+  <p>Date in Paramneterized Pipes Specific Format : <strong>{{dob |date: "dd/MM/yy"}}</strong></p>
+  <p>Date in Paramneterized Pipes Specific Format : <strong>{{dob |date: "dd/MMM/yyyy"}}</strong></p>
+  <p>Date in Paramneterized Pipes Specific Format : <strong>{{dob |date: "dd/MMMM/yyyy"}}</strong></p>
+  <p>Date in Paramneterized Pipes Medium Time : <strong>{{dob |date:"mediumTime"}}</strong></p>
+  <br/>
+  <br/>
+  <br/>
+  <!-- It is using current now() method of function -->
+  <p>Date of Birth : <strong>{{dob1}}</strong></p>
+  <p>Date in Paramneterized Pipes : <strong>{{dob1 |date: "medium"}}</strong></p>
+  <p>Date in Paramneterized Pipes Specific Format : <strong>{{dob1 |date: "dd/MM/yyyy"}}</strong></p>
+  <p>Date in Paramneterized Pipes Specific Format : <strong>{{dob1 |date: "dd/MM/yy"}}</strong></p>
+  <p>Date in Paramneterized Pipes Specific Format : <strong>{{dob1 |date: "dd/MMM/yyyy"}}</strong></p>
+  <p>Date in Paramneterized Pipes Specific Format : <strong>{{dob1 |date: "dd/MMMM/yyyy"}}</strong></p>
+  <p>Date in Paramneterized Pipes Medium Time : <strong>{{dob1 |date:"mediumTime"}}</strong></p>
+
+  <br/>
+  <br/>
+  <p>Salary : <strong>{{salary}}</strong></p>
+  <p>Salary in USD : <strong>{{salary | currency}}</strong></p>
+  <!-- can provide the multiple parameters here is USD and true are 2 paramters -->
+  <p>Salary in USD true : <strong>{{salary | currency : "USD":true}}</strong></p>
+  
+  
 </div>
 
 <router-outlet></router-outlet>
