@@ -2,15 +2,33 @@
   <h1>Welcome to {{title}}</h1>
 
   <h2>Pipes Operator ( | )</h2>
-  <h3>Pipes with String</h3>
-  <h4>Name : {{eName|uppercase}} - Position : {{ePosition|lowercase}} </h4>
-  <h3>Work : {{eWork| titlecase }}</h3>
+  <h3>Pipes in date, percent, decimal, currency</h3>
+  
 
-  <!-- Slice Example -->
-   <!-- start from 0 and end on 8 -->
-   <h4> Slice of Role : {{eWork | slice:0:8 | titlecase}} </h4>
-   <!-- start from 9 and end till complete -->
-   <h4> Slice of Role : {{eWork | slice:9 | titlecase}} </h4>
+  <h2>Date Pipes</h2>
+  <h3> {{currentDate}} </h3>
+  <h3> Short Date : {{currentDate|date:"shortDate"}} </h3>
+  <h3> Long Date : {{currentDate|date:"longDate"}} </h3>
+  <h3> Full Date : {{currentDate|date:"fullDate"}} </h3>
+
+  <h2>Percent Pipes</h2>
+  <h3> {{myNumber}} </h3>
+  <h3> {{myNumber|percent}} </h3>
+  <!-- 2 is the number before decimal , 5 is the range the numbers after decimal points-->
+  <h3> {{myNumber|percent:'2.4-5'}} </h3>
+
+  <h2>Decimal Pipes</h2>
+  <h3> {{myNumber}} </h3>
+  <h3> {{myNumber|number}} </h3>
+
+  <h2>Currency Pipes</h2>
+  <h3> {{myNumber}} </h3>
+  <!-- By default it has the doller sign-->
+  <h3> {{myNumber|currency}} </h3>
+  <!-- here the INR Logo get there -->
+  <h3> {{myNumber|currency:"INR"}} </h3>
+  <!-- here, we can used code INR here -->
+  <h3> {{myNumber|currency:"INR ":"code"}} </h3>
 </div>
 
 <router-outlet></router-outlet>
