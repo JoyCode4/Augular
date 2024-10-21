@@ -2,18 +2,28 @@
   <h1>Welcome to {{title}}</h1>
 
   <h2>Pipes Operator ( | )</h2>
-  <!-- it convert Data or Value into JSON -->
-  <h3>JSON Pipe</h3>
+  <h3>Custom Pipes</h3>
+  <!-- to create pipe terminal cmd is : ng g pipe <pipe_name> --flat -->
+  <!-- --flat is used to generate it in app directory -->
 
-  <div>
-    Only using json pipe <br/>
-    {{employeesDetails|json}}
-  </div>
-  <br/>
-  <div>
-    Slice and Json Pipe <br/>
-    {{employeesDetails|slice:0:4|json}}
-  </div>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Code</th>
+        <th>Name</th>
+        <th>Salary</th>
+        <th>Gender</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let e of employeeData">
+        <td>{{e.code}}</td>
+        <td>{{e.name | customPipe:e.gender}}</td>
+        <td>{{e.salary | currency:'INR':true:'1.2-2'}}</td>
+        <td>{{e.gender | uppercase}}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
 <router-outlet></router-outlet>

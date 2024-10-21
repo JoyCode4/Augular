@@ -111,6 +111,40 @@ export class AppComponent {
       {"id":7,"name":"Rajesh"},
     ]
 
+    employeeData:EmpPerson[]=[
+      {
+        code:"001",
+        name:"Rahul",
+        salary:12000,
+        gender:"male"
+      },{
+        code:"002",
+        name:"Rohini",
+        salary:15000,
+        gender:"female"
+      },{
+        code:"003",
+        name:"Raj",
+        salary:18000,
+        gender:"male"
+      },{
+        code:"004",
+        name:"Arya",
+        salary:14000,
+        gender:"female"
+      },{
+        code:"005",
+        name:"Aman",
+        salary:16000,
+        gender:"male"
+      },{
+        code:"006",
+        name:"Arjun",
+        salary:10000,
+        gender:"male"
+      }
+    ]
+
   constructor(){
     this.students=[{id:1,name: "Student1",gender:"M",age:24,course:"BCA"},{id:2,name: "Student2",gender:"F",age:22,course:"MBA"},{id:3,name: "Student3",gender:"M",age:26,course:"BSc"},{id:4,name: "Student4",gender:"F",age:20,course:"MCA"}];
   }
@@ -188,10 +222,18 @@ interface Employee{
   code:string,
   name:string,
   salary:number,
-  DOB:string
+  DOB:string,
 }
 
 interface Emp{
   id:number,
   name:string
 }
+
+interface EmpPerson{
+  code:string,
+  name:string,
+  salary:number,
+  gender:string,
+}
+
