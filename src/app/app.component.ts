@@ -101,6 +101,16 @@ export class AppComponent {
     currentDate:Date=new Date();
     myNumber:number=0.124678543245;
 
+    employeesDetails:Emp[]=[
+      {"id":1,"name":"Rahul"},
+      {"id":2,"name":"Rohan"},
+      {"id":3,"name":"Raj"},
+      {"id":4,"name":"Ravi"},
+      {"id":5,"name":"Rohit"},
+      {"id":6,"name":"Ramesh"},
+      {"id":7,"name":"Rajesh"},
+    ]
+
   constructor(){
     this.students=[{id:1,name: "Student1",gender:"M",age:24,course:"BCA"},{id:2,name: "Student2",gender:"F",age:22,course:"MBA"},{id:3,name: "Student3",gender:"M",age:26,course:"BSc"},{id:4,name: "Student4",gender:"F",age:20,course:"MCA"}];
   }
@@ -179,4 +189,9 @@ interface Employee{
   name:string,
   salary:number,
   DOB:string
+}
+
+interface Emp{
+  id:number,
+  name:string
 }
