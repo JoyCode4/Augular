@@ -1,12 +1,13 @@
 <div>
   <h1>Welcome to {{title}}</h1>
 
-  <h3>Data Binding - Interpolation</h3>
+  <h3>Data Binding - Property</h3>
   <p>One Way Binding - Component(.ts file) to View(.html file)</p>
-  <!-- by interpolation we can also concate string -->
-  <h3>Employee Name : {{empFirstName+" "+empLastName}}</h3>
-  <!-- we can also perform arthimatic Operation by using interpolation -->
-  <h4>Count : {{a%b}}</h4>
+  <h3 [innerHTML]="empFirstName+' '+empLastName"></h3>
+  <!-- using src as property from .ts file -->
+  <img [src]="angularImg" [height]="200">
+  <!-- using src as source link directly in html without using property frokm .ts file, but it should have to put in double and then single quotes   -->
+  <img [src]="'https://angular.io/assets/images/logos/angular/angular.png'" [height]="200">
 </div>
 
 <router-outlet></router-outlet>
