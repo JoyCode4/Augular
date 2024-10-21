@@ -23,6 +23,27 @@ export class AppComponent {
   // attribute Binding
   cols:number=3;
   bdr:number=1;
+  
+    countryDetails:Country[]=[
+      {country: "USA", people:[{name:"John Doe"},{name:"Jane"},{name:"Michael"},{name:"Emily"}]},
+      {country: "UK", people:[{name:"Sam"},{name:"Sarah"},{name:"Tom"},{name:"Jessica"}]},
+      {country: "Canada", people:[{name:"Bob"},{name:"Alice"},{name:"Daniel"},{name:"Eric"}]},
+      {country: "Australia", people:[{name:"Fred"},{name:"Grace"},{name:"Henry"},{name:"Ivy"}]},
+      {country: "India", people:[{name:"Joe"},{name:"Karen"},{name:"Lisa"},{name:"Mike"}]}
+    ]
+  
+    people:Person[]=[
+      {name:"John Doe", country:"USA"},
+      {name:"Jane Smith", country:"UK"},
+      {name:"Michael Johnson", country:"Canada"},
+      {name:"Emily Davis", country:"Australia"},
+      {name:"Joe Brown", country:"India"},
+      {name:"Grace Thompson", country:"Australia"},
+      {name:"Mike Wilson", country:"India"},
+      {name:"Karen Wilson", country:"USA"},
+    ]
+  
+    users:string[]=["John Doe","Jane Smith","Michael Johnson","Emily Davis","Joe Brown","Grace Thompson","Mike Wilson","Karen Wilson"];
 
   constructor(){
     this.students=[{id:1,name: "Student1",gender:"M",age:24,course:"BCA"},{id:2,name: "Student2",gender:"F",age:22,course:"MBA"},{id:3,name: "Student3",gender:"M",age:26,course:"BSc"},{id:4,name: "Student4",gender:"F",age:20,course:"MCA"}];
@@ -63,26 +84,13 @@ export class AppComponent {
     return {five:true,two:true}
   }
 
-  countryDetails:Country[]=[
-    {country: "USA", people:[{name:"John Doe"},{name:"Jane"},{name:"Michael"},{name:"Emily"}]},
-    {country: "UK", people:[{name:"Sam"},{name:"Sarah"},{name:"Tom"},{name:"Jessica"}]},
-    {country: "Canada", people:[{name:"Bob"},{name:"Alice"},{name:"Daniel"},{name:"Eric"}]},
-    {country: "Australia", people:[{name:"Fred"},{name:"Grace"},{name:"Henry"},{name:"Ivy"}]},
-    {country: "India", people:[{name:"Joe"},{name:"Karen"},{name:"Lisa"},{name:"Mike"}]}
-  ]
+  onClick(){
+    console.log("Clicked on Button (Click Me..:))");
+  }
 
-  people:Person[]=[
-    {name:"John Doe", country:"USA"},
-    {name:"Jane Smith", country:"UK"},
-    {name:"Michael Johnson", country:"Canada"},
-    {name:"Emily Davis", country:"Australia"},
-    {name:"Joe Brown", country:"India"},
-    {name:"Grace Thompson", country:"Australia"},
-    {name:"Mike Wilson", country:"India"},
-    {name:"Karen Wilson", country:"USA"},
-  ]
-
-  users:string[]=["John Doe","Jane Smith","Michael Johnson","Emily Davis","Joe Brown","Grace Thompson","Mike Wilson","Karen Wilson"];
+  showAlert(){
+    alert("You have Hover on Hover Button...;)");
+  }
 }
 interface Student{
   id:number,

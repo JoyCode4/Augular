@@ -1,24 +1,12 @@
 <div>
   <h1>Welcome to {{title}}</h1>
 
-  <h3>Data Binding - Attribute</h3>
+  <h3>Data Binding - Event</h3>
   <p>One Way Binding - Component(.ts file) to View(.html file)</p>
-  <!-- we use [attr<attribute_name>] and provide the value in quotes from the .ts file -->
-  <table [attr.border]="bdr">
-    <tr>
-      <td [attr.colspan]="cols">Students</td>
-    </tr>
-    <tr>
-      <td>Id</td>
-      <td>Name</td>
-      <td>Class</td>
-    </tr>
-    <tr>
-      <td>001</td>
-      <td>John</td>
-      <td>10th</td>
-    </tr>
-  </table>
+  <!-- we difined the event in '()' paranthesis and in quotes provide the event handler or function -->
+  <button (click)="onClick()">Click Me..:)</button>
+  <!-- for hover usaed mouseover -->
+  <button (mouseover)="showAlert()" >Hover On</button>
 </div>
 
 <router-outlet></router-outlet>
