@@ -44,3 +44,9 @@ table{
 .six{
     color:purple
 }
+
+.bold{
+    font-size: x-large;
+    font-weight: bold;
+    color: black;
+}

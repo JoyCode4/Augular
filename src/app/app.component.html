@@ -1,12 +1,19 @@
 <div>
   <h1>Welcome to {{title}}</h1>
 
-  <h3>Data Binding - Event</h3>
-  <p>One Way Binding - Component(.ts file) to View(.html file)</p>
-  <!-- we difined the event in '()' paranthesis and in quotes provide the event handler or function -->
-  <button (click)="onClick()">Click Me..:)</button>
-  <!-- for hover usaed mouseover -->
-  <button (mouseover)="showAlert()" >Hover On</button>
+  <h3>Data Binding</h3>
+  <p><span class="bold">Two Way Data Binding</span> - Component(.ts file) to View(.html file) | View(.html file) to Component(.ts file)</p>
+  <!-- manually Two way binding using the property and event -->
+  Enter Your Name : <input [value]="data" (input)="display($event.target)">
+  <br/>
+  Your name : {{data}}
+  <br/>
+  <br/>
+  <!-- using ngModel Two Way Data Binding -->
+   <!-- for this u require to use FormsModule also and have to import-->
+  Enter your Friend Name : <input type="text" [(ngModel)]="friend">
+  <br/>
+  Your Friend Name : {{friend}}
 </div>
 
 <router-outlet></router-outlet>

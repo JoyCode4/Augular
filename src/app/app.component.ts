@@ -23,6 +23,10 @@ export class AppComponent {
   // attribute Binding
   cols:number=3;
   bdr:number=1;
+
+  // two binding
+  data:string="";
+  friend:string="";
   
     countryDetails:Country[]=[
       {country: "USA", people:[{name:"John Doe"},{name:"Jane"},{name:"Michael"},{name:"Emily"}]},
@@ -90,6 +94,10 @@ export class AppComponent {
 
   showAlert(){
     alert("You have Hover on Hover Button...;)");
+  }
+
+  display(val:any){
+    this.data=val.value;
   }
 }
 interface Student{
