@@ -1,13 +1,24 @@
 <div>
   <h1>Welcome to {{title}}</h1>
 
-  <h3>Data Binding - Property</h3>
+  <h3>Data Binding - Attribute</h3>
   <p>One Way Binding - Component(.ts file) to View(.html file)</p>
-  <h3 [innerHTML]="empFirstName+' '+empLastName"></h3>
-  <!-- using src as property from .ts file -->
-  <img [src]="angularImg" [height]="200">
-  <!-- using src as source link directly in html without using property frokm .ts file, but it should have to put in double and then single quotes   -->
-  <img [src]="'https://angular.io/assets/images/logos/angular/angular.png'" [height]="200">
+  <!-- we use [attr<attribute_name>] and provide the value in quotes from the .ts file -->
+  <table [attr.border]="bdr">
+    <tr>
+      <td [attr.colspan]="cols">Students</td>
+    </tr>
+    <tr>
+      <td>Id</td>
+      <td>Name</td>
+      <td>Class</td>
+    </tr>
+    <tr>
+      <td>001</td>
+      <td>John</td>
+      <td>10th</td>
+    </tr>
+  </table>
 </div>
 
 <router-outlet></router-outlet>

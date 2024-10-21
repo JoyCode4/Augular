@@ -20,6 +20,10 @@ export class AppComponent {
   b:number=67;
   angularImg:string="https://angular.io/assets/images/logos/angular/angular.png";
 
+  // attribute Binding
+  cols:number=3;
+  bdr:number=1;
+
   constructor(){
     this.students=[{id:1,name: "Student1",gender:"M",age:24,course:"BCA"},{id:2,name: "Student2",gender:"F",age:22,course:"MBA"},{id:3,name: "Student3",gender:"M",age:26,course:"BSc"},{id:4,name: "Student4",gender:"F",age:20,course:"MCA"}];
   }
