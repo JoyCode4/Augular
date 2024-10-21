@@ -2,13 +2,15 @@
   <h1>Welcome to {{title}}</h1>
 
   <h2>Pipes Operator ( | )</h2>
-  <h3>Chaining Pipes</h3>
-  <p>{{dob}}</p>
-  <p>Medium Date : {{dob|date : "medium"}}</p>
-  <!-- chaining of pipes first pipe is fullDate and later pipe is uppercase -->
-   <p>Full Date in Uppercase : {{dob|date:"fullDate" | uppercase}}</p>
-  
-  
+  <h3>Pipes with String</h3>
+  <h4>Name : {{eName|uppercase}} - Position : {{ePosition|lowercase}} </h4>
+  <h3>Work : {{eWork| titlecase }}</h3>
+
+  <!-- Slice Example -->
+   <!-- start from 0 and end on 8 -->
+   <h4> Slice of Role : {{eWork | slice:0:8 | titlecase}} </h4>
+   <!-- start from 9 and end till complete -->
+   <h4> Slice of Role : {{eWork | slice:9 | titlecase}} </h4>
 </div>
 
 <router-outlet></router-outlet>
