@@ -15,3 +15,6 @@ span{
 li{
     list-style: none;
 }
+table{
+    margin: 20px auto;
+}

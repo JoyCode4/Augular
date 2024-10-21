@@ -1,19 +1,34 @@
 <div>
   <h1>Welcome to {{title}}</h1>
 
-  <h3>Using ngFor</h3>
-  <ul>
-    <!-- we can also ue even, odd, first and last for any purpose -->
-    <li *ngFor="let student of students; let i=index let f=first let l=last let e=even let o=odd">
-      <div>
-        <!-- <div *ngIf="student.id%2!=0"> -->
-        <span>index : {{i+1}} | </span>
-        <span>id : {{student.id}} | </span>
-        <span>Name : {{student.name}}
-        </span>
-      </div>
-    </li>
-  </ul>
+  <h3>Using Track by *ngFor</h3>
+  
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Index</th>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Age</th>
+        <th>Course</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- By using this TrackBy Attribute in ngFor it will only change the update data not whole DOM -->
+      <tr *ngFor="let s of students; let i=index; TrackBy:trackById">
+        <td>{{i+1}}</td>
+        <td>{{s.id}}</td>
+        <td>{{s.name}}</td>
+        <td>{{s.gender}}</td>
+        <td>{{s.age}}</td>
+        <td>{{s.course}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button (click)="getMoreData()">Get more Student</button>
+  
 
 </div>
 
