@@ -1,19 +1,29 @@
 <div>
   <h1>Welcome to {{title}}</h1>
 
-  <h3>Data Binding</h3>
-  <p><span class="bold">Two Way Data Binding</span> - Component(.ts file) to View(.html file) | View(.html file) to Component(.ts file)</p>
-  <!-- manually Two way binding using the property and event -->
-  Enter Your Name : <input [value]="data" (input)="display($event.target)">
-  <br/>
-  Your name : {{data}}
-  <br/>
-  <br/>
-  <!-- using ngModel Two Way Data Binding -->
-   <!-- for this u require to use FormsModule also and have to import-->
-  Enter your Friend Name : <input type="text" [(ngModel)]="friend">
-  <br/>
-  Your Friend Name : {{friend}}
+  <h2>Pipes Operator ( | )</h2>
+  <h1>Employees Details</h1>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Sr. No</th>
+        <th>Emp Code</th>
+        <th>Emp Name</th>
+        <th>Emp Salary</th>
+        <th>Emp DOB</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let e of employees; let i=index">
+        <!-- here, we used normal pipe operator for code and name of employees  -->
+        <td>{{i+1}}</td>
+        <td>{{e.code | uppercase}}</td>
+        <td>{{e.name | uppercase}}</td>
+        <td>{{e.salary}}</td>
+        <td>{{e.DOB}}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
 <router-outlet></router-outlet>

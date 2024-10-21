@@ -49,6 +49,45 @@ export class AppComponent {
   
     users:string[]=["John Doe","Jane Smith","Michael Johnson","Emily Davis","Joe Brown","Grace Thompson","Mike Wilson","Karen Wilson"];
 
+    employees:Employee[]=[
+      {
+        code:"emp001",
+        name:"Jayesh",
+        salary:20000,
+        DOB:"02/aug/2000"
+      },
+      {
+        code:"emp002",
+        name:"Rohan",
+        salary:12000,
+        DOB:"03/sep/2002"
+      },
+      {
+        code:"emp003",
+        name:"Rahul",
+        salary:15000,
+        DOB:"16/nov/1999"
+      },
+      {
+        code:"emp004",
+        name:"Rohit",
+        salary:18000,
+        DOB:"20/dec/2001"
+      },
+      {
+        code:"emp005",
+        name:"Ravi",
+        salary:10000,
+        DOB:"12/feb/2000"
+      },
+      {
+        code:"emp006",
+        name:"Raj",
+        salary:16000,
+        DOB:"05/may/2001"
+      }
+    ]
+
   constructor(){
     this.students=[{id:1,name: "Student1",gender:"M",age:24,course:"BCA"},{id:2,name: "Student2",gender:"F",age:22,course:"MBA"},{id:3,name: "Student3",gender:"M",age:26,course:"BSc"},{id:4,name: "Student4",gender:"F",age:20,course:"MCA"}];
   }
@@ -120,4 +159,11 @@ interface People{
 interface Person{
   name:string,
   country:string
+}
+
+interface Employee{
+  code:string,
+  name:string,
+  salary:number,
+  DOB:string
 }
