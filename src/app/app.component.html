@@ -1,34 +1,29 @@
 <div>
   <h1>Welcome to {{title}}</h1>
 
-  <h3>Using Track by *ngFor</h3>
-  
-  <table border="1">
-    <thead>
-      <tr>
-        <th>Index</th>
-        <th>Id</th>
-        <th>Name</th>
-        <th>Gender</th>
-        <th>Age</th>
-        <th>Course</th>
-      </tr>
-    </thead>
-    <tbody>
-      <!-- By using this TrackBy Attribute in ngFor it will only change the update data not whole DOM -->
-      <tr *ngFor="let s of students; let i=index; TrackBy:trackById">
-        <td>{{i+1}}</td>
-        <td>{{s.id}}</td>
-        <td>{{s.name}}</td>
-        <td>{{s.gender}}</td>
-        <td>{{s.age}}</td>
-        <td>{{s.course}}</td>
-      </tr>
-    </tbody>
-  </table>
+  <h3>Using Grouping with *ngFor</h3>
 
-  <button (click)="getMoreData()">Get more Student</button>
+  <!-- using the nested list for getting expected result -->
+   <!-- so, we use the grouping here ,as data is is in the nested format-->
   
+  <ul *ngFor="let country of countryDetails">
+    <li>{{country.country}}</li>
+    <ul>
+      <li *ngFor="let person of country.people">
+        {{person.name}}
+      </li>
+    </ul>
+  </ul>
+
+  <!-- <ul >
+    <li *ngFor="let country of countryDetails">{{country.country}}
+      <ul>
+        <li *ngFor="let person of country.people">
+          {{person.name}}
+        </li>
+      </ul>
+    </li>
+  </ul> -->
 
 </div>
 

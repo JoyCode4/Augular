@@ -35,6 +35,14 @@ export class AppComponent {
   trackById(index:number,student:Student):number{
     return student.id;
   }
+
+  countryDetails:Country[]=[
+    {country: "USA", people:[{name:"John Doe"},{name:"Jane"},{name:"Michael"},{name:"Emily"}]},
+    {country: "UK", people:[{name:"Sam"},{name:"Sarah"},{name:"Tom"},{name:"Jessica"}]},
+    {country: "Canada", people:[{name:"Bob"},{name:"Alice"},{name:"Daniel"},{name:"Eric"}]},
+    {country: "Australia", people:[{name:"Fred"},{name:"Grace"},{name:"Henry"},{name:"Ivy"}]},
+    {country: "India", people:[{name:"Joe"},{name:"Karen"},{name:"Lisa"},{name:"Mike"}]}
+  ]
 }
 interface Student{
   id:number,
@@ -42,4 +50,13 @@ interface Student{
   gender:string,
   age:number,
   course:string
+}
+
+interface Country{
+  country:string,
+  people:People[]
+}
+
+interface People{
+  name:string,
 }

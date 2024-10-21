@@ -13,7 +13,7 @@ span{
     font-size: 3rem;
 }
 li{
-    list-style: none;
+    text-align: start;
 }
 table{
     margin: 20px auto;
