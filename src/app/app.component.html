@@ -1,18 +1,12 @@
 <div>
   <h1>Welcome to {{title}}</h1>
 
-  <h3>Using ngClass</h3>
-
-  <!-- both css class one and two applied -->
-  <h2 [ngClass]="'one two'">Using ngClass as String</h2>
-
-  <div *ngFor="let u of users">
-    <h3 [ngClass]="'three four'">{{u}}</h3>
-  </div>
-
-  <h2 [ngClass]="['two','three']">Using ngClass as Array</h2>
-  <h2 [ngClass]="{two:false,six:true}">Using ngClass as Object</h2>
-  <h2 [ngClass]="getCssClass('normal')">Using ngClass as function</h2>
+  <h3>Data Binding - Interpolation</h3>
+  <p>One Way Binding - Component(.ts file) to View(.html file)</p>
+  <!-- by interpolation we can also concate string -->
+  <h3>Employee Name : {{empFirstName+" "+empLastName}}</h3>
+  <!-- we can also perform arthimatic Operation by using interpolation -->
+  <h4>Count : {{a%b}}</h4>
 </div>
 
 <router-outlet></router-outlet>
