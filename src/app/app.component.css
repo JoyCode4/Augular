@@ -12,9 +12,10 @@ span{
     color: blue;
     font-size: 3rem;
 }
-li{
+li,li div{
     text-align: start;
 }
+
 table{
     margin: 20px auto;
 }

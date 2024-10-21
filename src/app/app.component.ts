@@ -36,12 +36,34 @@ export class AppComponent {
     return student.id;
   }
 
+  getColor(country:string):string{
+    switch(country){
+      case "USA": return "blue";
+      case "UK": return "green";
+      case "Canada": return "red";
+      case "Australia": return "brown";
+      case "India": return "purple";
+      default: return "black";
+    }
+  }
+
   countryDetails:Country[]=[
     {country: "USA", people:[{name:"John Doe"},{name:"Jane"},{name:"Michael"},{name:"Emily"}]},
     {country: "UK", people:[{name:"Sam"},{name:"Sarah"},{name:"Tom"},{name:"Jessica"}]},
     {country: "Canada", people:[{name:"Bob"},{name:"Alice"},{name:"Daniel"},{name:"Eric"}]},
     {country: "Australia", people:[{name:"Fred"},{name:"Grace"},{name:"Henry"},{name:"Ivy"}]},
     {country: "India", people:[{name:"Joe"},{name:"Karen"},{name:"Lisa"},{name:"Mike"}]}
+  ]
+
+  people:Person[]=[
+    {name:"John Doe", country:"USA"},
+    {name:"Jane Smith", country:"UK"},
+    {name:"Michael Johnson", country:"Canada"},
+    {name:"Emily Davis", country:"Australia"},
+    {name:"Joe Brown", country:"India"},
+    {name:"Grace Thompson", country:"Australia"},
+    {name:"Mike Wilson", country:"India"},
+    {name:"Karen Wilson", country:"USA"},
   ]
 }
 interface Student{
@@ -59,4 +81,9 @@ interface Country{
 
 interface People{
   name:string,
+}
+
+interface Person{
+  name:string,
+  country:string
 }
