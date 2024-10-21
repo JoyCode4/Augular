@@ -1,16 +1,18 @@
 <div>
   <h1>Welcome to {{title}}</h1>
 
-  <h3>Using ngStyle</h3>
+  <h3>Using ngClass</h3>
 
-  <ul>
-    <li *ngFor="let p of people">
-      <div [ngStyle]="{'color':getColor(p.country)}">
-       {{p.name}} | {{p.country}}
-      </div>
-    </li>
-  </ul>
+  <!-- both css class one and two applied -->
+  <h2 [ngClass]="'one two'">Using ngClass as String</h2>
 
+  <div *ngFor="let u of users">
+    <h3 [ngClass]="'three four'">{{u}}</h3>
+  </div>
+
+  <h2 [ngClass]="['two','three']">Using ngClass as Array</h2>
+  <h2 [ngClass]="{two:false,six:true}">Using ngClass as Object</h2>
+  <h2 [ngClass]="getCssClass('normal')">Using ngClass as function</h2>
 </div>
 
 <router-outlet></router-outlet>

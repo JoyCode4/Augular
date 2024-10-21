@@ -47,6 +47,13 @@ export class AppComponent {
     }
   }
 
+  getCssClass(mode:string):object{
+    if(mode==='normal'){
+      return {one:true,four:true}
+    }
+    return {five:true,two:true}
+  }
+
   countryDetails:Country[]=[
     {country: "USA", people:[{name:"John Doe"},{name:"Jane"},{name:"Michael"},{name:"Emily"}]},
     {country: "UK", people:[{name:"Sam"},{name:"Sarah"},{name:"Tom"},{name:"Jessica"}]},
@@ -65,6 +72,8 @@ export class AppComponent {
     {name:"Mike Wilson", country:"India"},
     {name:"Karen Wilson", country:"USA"},
   ]
+
+  users:string[]=["John Doe","Jane Smith","Michael Johnson","Emily Davis","Joe Brown","Grace Thompson","Mike Wilson","Karen Wilson"];
 }
 interface Student{
   id:number,

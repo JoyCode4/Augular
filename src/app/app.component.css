@@ -19,3 +19,28 @@ li,li div{
 table{
     margin: 20px auto;
 }
+
+/* classes */
+.one{
+    color: red;
+}
+
+.two{
+    font-size: 3rem;
+}
+
+.three{
+    color: rgb(255, 102, 0);
+}
+
+.four{
+    font-size: 25px;
+}
+
+.five{
+    color:green;
+}
+
+.six{
+    color:purple
+}
