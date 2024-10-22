@@ -160,7 +160,7 @@ export class AppComponent {
 
   getMessages(){
     this.msg=this._messageService.getMessage();
-    this.othermsg=this._messageService.getOtherMessage();
+    // this.othermsg=this._messageService.getOtherMessage();
   }
   student(){
     this.router.navigate(['/student'])

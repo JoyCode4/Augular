@@ -10,6 +10,7 @@ import { StudentDetailsComponent } from './student-details/student-details.compo
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { MessageService } from './message.service';
 import { OthermessageService } from './othermessage.service';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { OthermessageService } from './othermessage.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
   ],
   // here, servidce is provided in app module so that it can be used in all the component.
   providers: [MessageService,OthermessageService],
