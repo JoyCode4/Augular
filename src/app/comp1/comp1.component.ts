@@ -5,7 +5,7 @@ import { NumlistService } from '../numlist.service';
   selector: 'app-comp1',
   templateUrl: './comp1.component.html',
   styleUrls: ['./comp1.component.css'],
-  providers:[NumlistService]
+  // providers:[NumlistService]
 })
 export class Comp1Component{
   list:number[]=[];
