@@ -1,6 +1,5 @@
 import { Component, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
-import { MessageService } from './message.service';
 
 @Component({
   selector: 'app-root',
@@ -150,7 +149,7 @@ export class AppComponent {
       }
     ]
 
-  constructor(private router:Router,private _messageService:MessageService){
+  constructor(private router:Router){
     this.students=[{id:1,name: "Student1",gender:"M",age:24,course:"BCA"},{id:2,name: "Student2",gender:"F",age:22,course:"MBA"},{id:3,name: "Student3",gender:"M",age:26,course:"BSc"},{id:4,name: "Student4",gender:"F",age:20,course:"MCA"}];
   }
 
@@ -159,9 +158,10 @@ export class AppComponent {
   }
 
   getMessages(){
-    this.msg=this._messageService.getMessage();
+    // this.msg=this._messageService.getMessage();
     // this.othermsg=this._messageService.getOtherMessage();
   }
+  
   student(){
     this.router.navigate(['/student'])
   }

@@ -1,0 +1,14 @@
+<h1>Component 1</h1>
+<div>
+    <input type="text" #data>
+    <button class="btn btn-primary" (click)="addNumber(data.value)"> Add Number </button>
+
+    <div>
+        <h2>List of Numbers</h2>
+        <ul>
+            <li *ngFor="let n of list">
+                {{n}}
+            </li>
+        </ul>
+    </div>
+</div>
