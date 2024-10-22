@@ -7,11 +7,12 @@ import { MessageService } from './message.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
   // here the service is used for componnet so here it is provided in providers. and it can be only used for this component where it is provided.
-  providers:[MessageService]
+  // providers:[MessageService]
 })
 export class AppComponent {
   title = 'Angular Application';
   msg:string="";
+  othermsg:string="";
   name="";
   students:Student[]=[];
   // @HostListener("click",['$event'])
@@ -154,7 +155,12 @@ export class AppComponent {
   }
 
   ngOnInit(){
+    // this.msg=this._messageService.getMessage();
+  }
+
+  getMessages(){
     this.msg=this._messageService.getMessage();
+    this.othermsg=this._messageService.getOtherMessage();
   }
   student(){
     this.router.navigate(['/student'])

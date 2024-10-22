@@ -9,6 +9,7 @@ import { StudentComponent } from './student/student.component';
 import { StudentDetailsComponent } from './student-details/student-details.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { MessageService } from './message.service';
+import { OthermessageService } from './othermessage.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { MessageService } from './message.service';
     FormsModule
   ],
   // here, servidce is provided in app module so that it can be used in all the component.
-  // providers: [MessageService],
+  providers: [MessageService,OthermessageService],
   bootstrap: [AppComponent],
   exports:[]
 })
