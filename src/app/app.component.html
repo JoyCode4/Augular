@@ -2,13 +2,10 @@
   <h1>Welcome to {{title}}</h1>
 
   <h2>Routing</h2>
-  <h3>Redirecting Routes</h3>
+  <h3>Wild Card  Routes</h3>
   <div class="routes">
-    <a [routerLink]="['/student']">Student</a>
-    <a [routerLink]="['/studentdetails']">Student Details</a>
+    <a [routerLink]="['nothing']">Error Page.</a>
   </div>
-  <button class="btn" (click)="student()">Server Side Render Student Component</button>
-  <button class="btn" (click)="studentDetails()">Server Side Render Student Details Component</button>
   <div>
     <router-outlet></router-outlet>
   </div>

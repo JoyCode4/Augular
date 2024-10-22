@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { CustomPipePipe } from './custompipe.pipe';
 import { StudentComponent } from './student/student.component';
 import { StudentDetailsComponent } from './student-details/student-details.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { StudentDetailsComponent } from './student-details/student-details.compo
     CustomPipePipe,
     StudentComponent,
     StudentDetailsComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
