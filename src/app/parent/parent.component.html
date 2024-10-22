@@ -1,8 +1,0 @@
-<p>parent works!</p>
-<div>
-    <!-- //parent to child -->
-    Data to Send : <input type="text" #PData (blur)="0"/> <!--(keyup)="0" --><br/><br/>
-    Child Send data : <span>{{data}}</span>
-    <!-- //child to parent  -->
-    <app-child [Pdata]="PData.value" (childEvent)="getData($event)"></app-child> <!--[] it is used to provide the property here is Pdata is property-->
-</div>

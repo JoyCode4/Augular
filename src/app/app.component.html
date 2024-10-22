@@ -1,29 +1,15 @@
 <div>
   <h1>Welcome to {{title}}</h1>
 
-  <h2>Pipes Operator ( | )</h2>
-  <h3>Custom Pipes</h3>
-  <!-- to create pipe terminal cmd is : ng g pipe <pipe_name> --flat -->
-  <!-- --flat is used to generate it in app directory -->
-
-  <table border="1">
-    <thead>
-      <tr>
-        <th>Code</th>
-        <th>Name</th>
-        <th>Salary</th>
-        <th>Gender</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let e of employeeData">
-        <td>{{e.code}}</td>
-        <td>{{e.name | customPipe:e.gender}}</td>
-        <td>{{e.salary | currency:'INR':true:'1.2-2'}}</td>
-        <td>{{e.gender | uppercase}}</td>
-      </tr>
-    </tbody>
-  </table>
+  <h2>Routing</h2>
+  <h3>Router Link</h3>
+  <div class="routes">
+    <a [routerLink]="['/student']">Student</a>
+    <a [routerLink]="['/studentdetails']">Student Details</a>
+  </div>
+  <button class="btn" (click)="student()">Server Side Render Student Component</button>
+  <button class="btn" (click)="studentDetails()">Server Side Render Student Details Component</button>
+  <div>
+    <router-outlet></router-outlet>
+  </div>
 </div>
-
-<router-outlet></router-outlet>

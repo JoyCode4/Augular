@@ -4,16 +4,16 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ChildComponent } from './child/child.component';
-import { ParentComponent } from './parent/parent.component';
 import { CustomPipePipe } from './custompipe.pipe';
+import { StudentComponent } from './student/student.component';
+import { StudentDetailsComponent } from './student-details/student-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ChildComponent,
-    ParentComponent,
     CustomPipePipe,
+    StudentComponent,
+    StudentDetailsComponent,
   ],
   imports: [
     BrowserModule,
