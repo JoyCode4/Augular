@@ -1,14 +1,17 @@
 import { Component, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
+import { MessageService } from './message.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
+  // here the service is used for componnet so here it is provided in providers. and it can be only used for this component where it is provided.
+  providers:[MessageService]
 })
 export class AppComponent {
   title = 'Angular Application';
-  
+  msg:string="";
   name="";
   students:Student[]=[];
   // @HostListener("click",['$event'])
@@ -146,8 +149,12 @@ export class AppComponent {
       }
     ]
 
-  constructor(private router:Router){
+  constructor(private router:Router,private _messageService:MessageService){
     this.students=[{id:1,name: "Student1",gender:"M",age:24,course:"BCA"},{id:2,name: "Student2",gender:"F",age:22,course:"MBA"},{id:3,name: "Student3",gender:"M",age:26,course:"BSc"},{id:4,name: "Student4",gender:"F",age:20,course:"MCA"}];
+  }
+
+  ngOnInit(){
+    this.msg=this._messageService.getMessage();
   }
   student(){
     this.router.navigate(['/student'])
