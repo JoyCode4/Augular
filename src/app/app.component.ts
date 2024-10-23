@@ -167,16 +167,34 @@ export class AppComponent {
     });
   }
 
-  postData(signupForm:any){
+  postData(){
     // console.log(signupForm.controls);
-    this.FirstName=signupForm.controls.fname.value;
-    this.LastName=signupForm.controls.lname.value;
-    this.Email=signupForm.controls.emailid.value;
-    this.Password=signupForm.controls.userpassword.value;
+    //! - is checking that it is null or not and then defining the value
+    this.FirstName=this.signupForm.get('fname')!.value;
+    this.LastName=this.signupForm.get('lname')!.value;
+    this.Email=this.signupForm.get('emailid')!.value;
+    this.Password=this.signupForm.get('userpassword')!.value;
     console.log(this.FirstName);
     console.log(this.LastName);
     console.log(this.Email);
     console.log(this.Password);
+    //it is used tor reset the form after submitting the data
+    this.signupForm.reset();
+
+  }
+
+  resetForm(){
+    //it is used tor reset the form after submitting the data
+    this.signupForm.reset();
+    //It will reset with perticular values after resetting the form
+    /*
+    this.signupForm.reset({
+      fname:"Jayesh",
+      lname:"Wadhonkar",
+      emailid:"jayesh@gmail.com",
+      userpassword:"123456"
+    });
+    */
   }
 
   ngOnInit(){
