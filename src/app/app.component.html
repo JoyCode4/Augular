@@ -1,28 +1,33 @@
 <div>
   <h1>Welcome to {{title}}</h1>
 
-  <h2>Angular Forms - Template Driven Forms</h2>
+  <h2>Angular Forms - Reactive Forms</h2>
   <div class="container">
     <div class="row">
       <div class="form-bg">
-        <form #regForm="ngForm" (ngSubmit)="registration(regForm)">
+        <form [formGroup]="signupForm" (ngSubmit)="postData(signupForm)">
           <h3 class="text-center">Registration Form</h3>
           <br/>
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="First Name" name="firstname" required ngModel>
+            <input type="text" class="form-control" placeholder="First Name" formControlName="fname">
           </div>
           <br/>
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="Last Name" name="lastname" required ngModel>
+            <input type="text" class="form-control" placeholder="Last Name" formControlName="lname">
           </div>
           <br/>
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="Email ID" name="email" required ngModel #email="ngModel">
-            <span class="help-box" *ngIf="email.touched && !email.valid">Please enter valid email</span>
+            <input type="text" class="form-control" placeholder="Email ID" formControlName="emailid">
+            <!-- <span class="help-box" *ngIf="">Please enter valid email</span> -->
+          </div>
+          <br/>
+          <div class="form-group">
+            <input type="password" class="form-control" placeholder="Password" formControlName="userpassword">
+            <!-- <span class="help-box" *ngIf="">Please enter valid email</span> -->
           </div>
           <br/>
           <div class="align-self-center">
-            <button type="submit" class="btn btn-primary" id="register" [disabled]="!regForm.valid">Register</button>
+            <button type="submit" class="btn btn-primary" id="register">Register</button>
           </div>
         </form>
       </div>
