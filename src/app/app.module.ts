@@ -4,17 +4,19 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CustomPipePipe } from './custompipe.pipe';
 import {HttpClientModule} from '@angular/common/http';
-import { Comp1Component } from './comp1/comp1.component';
-import { Comp2Component } from './comp2/comp2.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CustomPipePipe,
-    Comp1Component,
-    Comp2Component,
+    DashboardComponent,
+    AboutusComponent,
+    ContactusComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
