@@ -8,10 +8,10 @@ div{
     text-align: center;
 }
 
-span{
+/* span{
     color: blue;
     font-size: 3rem;
-}
+} */
 li,li div{
     text-align: start;
 }
@@ -83,4 +83,9 @@ table{
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.5s ease-in-out;
+}
+
+/* dynamic invalid using form ng function */
+input.ng-invalid.ng-touched{
+    border-color:red;
 }

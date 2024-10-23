@@ -9,19 +9,20 @@
           <h3 class="text-center">Registration Form</h3>
           <br/>
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="First Name" name="firstname" ngModel>
+            <input type="text" class="form-control" placeholder="First Name" name="firstname" required ngModel>
           </div>
           <br/>
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="Last Name" name="lastname" ngModel>
+            <input type="text" class="form-control" placeholder="Last Name" name="lastname" required ngModel>
           </div>
           <br/>
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="Email ID" name="email" ngModel>
+            <input type="text" class="form-control" placeholder="Email ID" name="email" required ngModel #email="ngModel">
+            <span class="help-box" *ngIf="email.touched && !email.valid">Please enter valid email</span>
           </div>
           <br/>
           <div class="align-self-center">
-            <button type="submit" class="btn btn-primary" id="register">Register</button>
+            <button type="submit" class="btn btn-primary" id="register" [disabled]="!regForm.valid">Register</button>
           </div>
         </form>
       </div>
