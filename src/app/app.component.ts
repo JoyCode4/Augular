@@ -1,10 +1,11 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
+  encapsulation:ViewEncapsulation.None,
   // here the service is used for componnet so here it is provided in providers. and it can be only used for this component where it is provided.
   // providers:[MessageService]
 })
