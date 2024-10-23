@@ -1,5 +1,5 @@
 import { Component, HostListener, ViewEncapsulation } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, NgForm } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validator, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -160,10 +160,10 @@ export class AppComponent {
     this.students=[{id:1,name: "Student1",gender:"M",age:24,course:"BCA"},{id:2,name: "Student2",gender:"F",age:22,course:"MBA"},{id:3,name: "Student3",gender:"M",age:26,course:"BSc"},{id:4,name: "Student4",gender:"F",age:20,course:"MCA"}];
     localStorage.setItem("loggedIn","false");
     this.signupForm=_formBuilder.group({
-      fname:new FormControl(),
-      lname:new FormControl(),
-      emailid:new FormControl(),
-      userpassword:new FormControl()
+      fname:["",Validators.required],
+      lname:["",Validators.required],
+      emailid:["",[Validators.required,Validators.email]],
+      userpassword:["",[Validators.required,Validators.minLength(6)]],
     });
   }
 
@@ -173,10 +173,10 @@ export class AppComponent {
     this.LastName=signupForm.controls.lname.value;
     this.Email=signupForm.controls.emailid.value;
     this.Password=signupForm.controls.userpassword.value;
-    // console.log(this.FirstName);
-    // console.log(this.LastName);
-    // console.log(this.Email);
-    // console.log(this.Password);
+    console.log(this.FirstName);
+    console.log(this.LastName);
+    console.log(this.Email);
+    console.log(this.Password);
   }
 
   ngOnInit(){

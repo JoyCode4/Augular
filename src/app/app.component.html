@@ -10,24 +10,35 @@
           <br/>
           <div class="form-group">
             <input type="text" class="form-control" placeholder="First Name" formControlName="fname">
+            <span class="text-danger" *ngIf="signupForm.controls['fname'].touched && !signupForm.controls['fname'].valid">
+              First Name is Required
+            </span>
           </div>
           <br/>
           <div class="form-group">
             <input type="text" class="form-control" placeholder="Last Name" formControlName="lname">
+            <span class="text-danger" *ngIf="signupForm.controls['lname'].touched && !signupForm.controls['lname'].valid">
+              Last Name is Required
+            </span>
           </div>
+
           <br/>
           <div class="form-group">
             <input type="text" class="form-control" placeholder="Email ID" formControlName="emailid">
-            <!-- <span class="help-box" *ngIf="">Please enter valid email</span> -->
+            <span class="text-danger" *ngIf="signupForm.controls['emailid'].touched && !signupForm.controls['emailid'].valid">
+              Email is Required & should be in proper format
+            </span>
           </div>
           <br/>
           <div class="form-group">
             <input type="password" class="form-control" placeholder="Password" formControlName="userpassword">
-            <!-- <span class="help-box" *ngIf="">Please enter valid email</span> -->
+            <span class="text-danger" *ngIf="signupForm.controls['userpassword'].touched && !signupForm.controls['userpassword'].valid">
+              Password is Required & should greater than 6 characters
+            </span>
           </div>
           <br/>
           <div class="align-self-center">
-            <button type="submit" class="btn btn-primary" id="register">Register</button>
+            <button type="submit" class="btn btn-primary" id="register" [disabled]="!signupForm.valid">Register</button>
           </div>
         </form>
       </div>
