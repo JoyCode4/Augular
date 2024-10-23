@@ -1,15 +1,30 @@
 <div>
   <h1>Welcome to {{title}}</h1>
 
-  <h2>Router Guard in Angular</h2>
-  <div class="routes">
-    <a routerLink="home">Home</a>
-    <a routerLink="aboutus">About</a>
-    <a routerLink="contactus">Contact Us</a>
-    <a routerLink="login">Login</a>
-    <a routerLink="student">Student</a>
-  </div>
-  <div>
-    <router-outlet></router-outlet>
+  <h2>Angular Forms - Template Driven Forms</h2>
+  <div class="container">
+    <div class="row">
+      <div class="form-bg">
+        <form #regForm="ngForm" (ngSubmit)="registration(regForm)">
+          <h3 class="text-center">Registration Form</h3>
+          <br/>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="First Name" name="firstname" ngModel>
+          </div>
+          <br/>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Last Name" name="lastname" ngModel>
+          </div>
+          <br/>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Email ID" name="email" ngModel>
+          </div>
+          <br/>
+          <div class="align-self-center">
+            <button type="submit" class="btn btn-primary" id="register">Register</button>
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
 </div>

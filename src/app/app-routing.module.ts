@@ -20,6 +20,7 @@ const routes: Routes = [
   // {path:"studentdetails",component:StudentDetailsComponent},
   // {path:"**",component:PageNotFoundComponent}
 
+  /*
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: DashboardComponent },
   {
@@ -72,6 +73,7 @@ const routes: Routes = [
       },
     ],
   },
+  */
 ];
 
 @NgModule({

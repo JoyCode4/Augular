@@ -219,6 +219,11 @@ export class AppComponent {
   display(val:any){
     this.data=val.value;
   }
+
+  registration(regForm:any){
+    let user=regForm.value;
+    console.log(user);
+  }
 }
 interface Student{
   id:number,
